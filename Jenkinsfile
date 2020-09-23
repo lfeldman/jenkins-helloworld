@@ -28,7 +28,7 @@ pipeline {
             docker image to our OCI private Registry*/
         steps {
             
-            sh "sudo docker login -u ociobenablement/identitycloudservice/lukasz.feldman@oracle.com -p ov;21h>xnnpEWVucXX.{ iad.ocir.io"
+            sh "sudo docker login -u ociobenablement/identitycloudservice/lukasz.feldman@oracle.com -p 'ov;21h>xnnpEWVucXX.{' iad.ocir.io"
             /*
             sh "sudo echo 'ov;21h>xnnpEWVucXX.{' | docker login iad.ocir.io --username ociobenablement/identitycloudservice/lukasz.feldman@oracle.com --password-stdin"
             */
