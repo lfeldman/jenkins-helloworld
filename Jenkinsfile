@@ -27,7 +27,10 @@ pipeline {
          /* Final stage of build; Push the 
             docker image to our OCI private Registry*/
         steps {
+            /*
             sh "sudo docker login -u ociobenablement/oracleidentitycloudservice/lukasz.feldman@oracle.com -p ov;21h>xnnpEWVucXX.{ iad.ocir.io"
+            */
+            sh "sudo echo 'ov;21h>xnnpEWVucXX.{' | docker login iad.ocir.io --username ociobenablement/oracleidentitycloudservice/lukasz.feldman@oracle.com --password-stdin"
             sh "sudo docker tag customapp:1 iad.ocir.io/ociobenablement/customapp:custom"
             sh 'sudo docker push iad.ocir.io/ociobenablement/customapp:custom'
             
